@@ -4,21 +4,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "UPCBarcodeLokup",
+    name: "UPCBarcodeLookup",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "UPCBarcodeLokup",
-            targets: ["UPCBarcodeLokup"]),
+            name: "UPCBarcodeLookup",
+            targets: ["UPCBarcodeLookup"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "UPCBarcodeLokup"),
+            name: "UPCBarcodeLookup"),
         .testTarget(
-            name: "UPCBarcodeLokupTests",
-            dependencies: ["UPCBarcodeLokup"]
+            name: "UPCBarcodeLookupTests",
+            dependencies: ["UPCBarcodeLookup"]
         ),
     ]
 )
