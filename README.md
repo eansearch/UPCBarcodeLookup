@@ -1,6 +1,6 @@
 # UPCBarcodeLookup
 
-Swift package for UPC, GTIN, ISBN and EAN barcode lookup
+Swift package for UPC, GTIN, ISBN and EAN barcode lookup using the API provided by [EAN-Search.org](https://www.ean-search.org/upc-barcode-lookup.html)
 
 ## Features
 
@@ -23,6 +23,13 @@ dependencies: [
     .package(url: "https://github.com/eansearch/UPCBarcodeLookup.git", branch: "main")
 ]
 ```
+
+## Usage
+
+Initialize the API instance with your [API token](https://www.ean-search.org/ean-database-api.html).
+
+With all methods returning a result list, you need to page throuth the results if there are more than 10.
+
 
 ## Example
 
