@@ -6,9 +6,9 @@
 //
 
 public struct Product: Decodable, Sendable {
-    let ean: String
-    let name: String
-    let categoryId: String
-    let categoryName: String
-    let issuingCountry: String
+    public let ean: String
+    public let name: String
+    public let categoryId: String
+    public let categoryName: String
+    public let issuingCountry: String
 }
