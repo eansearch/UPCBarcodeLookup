@@ -12,7 +12,7 @@ Swift package for UPC, GTIN, ISBN and EAN barcode lookup using the API provided 
 - search products matching some keywords: keywordSearch(keywords: )
 - restrict a keyord search to a product category: categorySearch(keywords: , category: )
 - find products with similar names: similarProductSearch(keywords: )
-- generate a PNG barcoide image: generateBarcodeImage(ean: , width: 40, height: )
+- generate a PNG barcoide image: generateBarcodeImage(ean: , width: , height: )
 
 ## Installation
 
