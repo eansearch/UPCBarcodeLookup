@@ -3,12 +3,9 @@
 Swift package for UPC, GTIN, ISBN and EAN barcode lookup using the API provided by [EAN-Search.org](https://www.ean-search.org/upc-barcode-lookup.html)
 
 <p align="center">
-    <a href="https://swiftpackageindex.com/eansearch/UPCBarcodeLookup">
-        <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Feansearch%2FUPCBarcodeLookup%2Fbadge%3Ftype%3Dplatforms" alt="Compatible with all Platforms">
-    </a>
-    <a href="https://github.com/apple/swift">
-        <img src="https://img.shields.io/badge/language-swift-orange.svg">
-    </a>
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Feansearch%2FUPCBarcodeLookup%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/eansearch/UPCBarcodeLookup)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Feansearch%2FUPCBarcodeLookup%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/eansearch/UPCBarcodeLookup)
+[![](https://img.shields.io/badge/language-swift-orange.svg)](https://swiftpackageindex.com/eansearch/UPCBarcodeLookup)
 
 ## Features
 
