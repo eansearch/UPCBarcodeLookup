@@ -1,6 +1,7 @@
 import Testing
 @testable import UPCBarcodeLookup
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+@Test func creditsUnknownBeforeFirstCall() async throws {
+    let upcLookup = UPCBarcodeLookup(apiToken: "")
+    #expect (upcLookup.creditsRemaining() == -1)
 }
