@@ -16,7 +16,7 @@ public class UPCBarcodeLookup {
         self.apiToken = apiToken
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func barcodeLookup(ean: String, language: Int = Languages.English) async throws -> Product? {
         guard let url = URL(string: self._baseURL() + "&op=barcode-lookup&ean=\(ean)&language=\(language)") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -30,7 +30,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func isbnLookup(isbn: String) async throws -> Product? {
         guard let url = URL(string: self._baseURL() + "&op=barcode-lookup&isbn=\(isbn)") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -44,7 +44,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func keywordSearch(keywords: String, language: Int = Languages.English, page: Int = 0) async throws -> [Product] {
         let keywords = keywords.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         guard let url = URL(string: self._baseURL() + "&op=product-search&name=\(keywords)&language=\(language)&page=\(page)") else {
@@ -59,7 +59,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func categorySearch(keywords: String, category: Int, language: Int = Languages.English, page: Int = 0) async throws -> [Product] {
         let keywords = keywords.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         guard let url = URL(string: self._baseURL() + "&op=category-search&name=\(keywords)&category=\(category)&language=\(language)&page=\(page)") else {
@@ -74,7 +74,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func similarProductSearch(keywords: String, language: Int = Languages.English, page: Int = 0) async throws -> [Product] {
         let keywords = keywords.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         guard let url = URL(string: self._baseURL() + "&op=similar-product-search&name=\(keywords)&language=\(language)&page=\(page)") else {
@@ -89,7 +89,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func barcodePrefixSearch(prefix: String, language: Int = Languages.English, page: Int = 0) async throws -> [Product] {
         guard let url = URL(string: self._baseURL() + "&op=barcode-prefix-search&prefix=\(prefix)&language=\(language)&page=\(page)") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -103,7 +103,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func issuingCountryLookup(ean: String) async throws -> String {
         guard let url = URL(string: self._baseURL() + "&op=issuing-country&ean=\(ean)") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -117,7 +117,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func verifyChecksum(ean: String) async throws -> Bool {
         guard let url = URL(string: self._baseURL() + "&op=verify-checksum&ean=\(ean)") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -131,7 +131,7 @@ public class UPCBarcodeLookup {
         }
     }
 
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func generateBarcodeImage(ean: String, width: Int = 102, height: Int = 50) async throws -> Data? {
         guard let url = URL(string: self._baseURL() + "&op=barcode-image&ean=\(ean)&width=\(width)&height=\(height)") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -146,7 +146,7 @@ public class UPCBarcodeLookup {
     }
 
     @available(*, deprecated)
-    @available(iOS 13, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     public func accountStatus() async throws -> (Int, Int) {
         guard let url = URL(string: self._baseURL() + "&op=account-status") else {
             throw UPCLookupError.apiError("Invalid URL")
@@ -172,7 +172,7 @@ public class UPCBarcodeLookup {
         return self.baseURL + "&token=\(apiToken)"
     }
 
-    @available(iOS 13, macOS 12, *)
+    @available(iOS 13, macOS 12, tvOS 13, watchOS 6, *)
     private func apiCall(url: URL, tries: Int = 1) async throws -> Data {
         let request = URLRequest(url: url)
         let (data, response) = try await URLSession.shared.data(for: request)
