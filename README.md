@@ -12,11 +12,11 @@ Swift package for UPC, GTIN, ISBN and EAN barcode lookup using the API provided 
 - lookup details for a specific ISBN 10 in our database: isbnLookup(isbn: )
 - just check the issuing country on any barcode: issuingCountryLookup(ean: )
 - verify the checksum of a barcode verifyChecksum(ean: ean)
-- get all products with a ceratin prefix: barcodePrefixSearch(prefix: )
+- get all products with a certain prefix: barcodePrefixSearch(prefix: )
 - search products matching some keywords: keywordSearch(keywords: )
-- restrict a keyord search to a product category: categorySearch(keywords: , category: )
+- restrict a keyword search to a product category: categorySearch(keywords: , category: )
 - find products with similar names: similarProductSearch(keywords: )
-- generate a PNG barcoide image: generateBarcodeImage(ean: , width: , height: )
+- generate a PNG barcode image: generateBarcodeImage(ean: , width: , height: )
 
 ## Installation
 
@@ -32,7 +32,7 @@ dependencies: [
 
 Initialize the API instance with your [API token](https://www.ean-search.org/ean-database-api.html).
 
-With all methods returning a result list, you need to page throuth the results if there are more than 10.
+With all methods returning a result list, you need to page through the results if there are more than 10.
 
 
 ## Example
